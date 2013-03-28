@@ -104,7 +104,7 @@ class DocController < ApplicationController
   private
 
   def book_resource
-    @book ||= Book.where(:code => (params[:lang] || "en")).first
+    @book ||= Book.where(:code => (params[:lang] || "pt-br")).first
     raise PageNotFound unless @book
     @book
   end

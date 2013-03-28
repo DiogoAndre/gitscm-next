@@ -1,11 +1,11 @@
-%header Search Results
+%header Resultados da Busca
 %table
   %tr.show-all
     %td.category &nbsp;
     %td.matches
       %ul
         %li
-          %a{:href=>"/search/results?search=#{@term}"} Show all results...
+          %a{:href=>"/search/results?search=#{@term}"} Mostar todos os resultados...
   - @data[:results].each do |cat|
     %tr
       %td.category

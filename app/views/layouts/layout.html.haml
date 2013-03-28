@@ -24,13 +24,13 @@
       %div#masthead
         %div.inner
           %p
-            Git is a <a href="/about/free-and-open-source">free and open source</a> distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+            Git é um sistema de controle de versão distribuído, <a href="/about/free-and-open-source">livre e de código aberto</a>, projetado para controlar de pequenos projetos  até projetos muito grandes com velocidade e eficiência.
 
           %p
-            Git is <a href="/documentation">easy to learn</a> and has a <a href="/about/small-and-fast">tiny footprint with lightning fast performance</a>. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like <a href="/about/branching-and-merging">cheap local branching</a>, convenient <a href="/about/staging-area">staging areas</a>, and <a href="/about/distributed">multiple workflows</a>.
+            Git é <a href="/documentation">fácil de aprender</a> ocupa <a href="/about/small-and-fast">pouco espaço</a> e tem uma performance ultra rápida. Ele supera ferramentas de SCM como Subversion, CVS, Perforce e ClearCase, com funcionalidades como <a href="/about/branching-and-merging">ramificações locais leves</a>, <a href="/about/staging-area">áreas de staging</a> convenientes e <a href="/about/distributed">múltiplos fluxos de trabalho</a>.
 
           %p.promo
-            <img src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/121/completed-try-git-1d5111823aae2bb9d14fbcb663998353.png" height="42" width="42" style="float: left; margin: -2px 4px 0 0;"/> Learn Git in your browser for free with <a href="http://try.github.com">Try Git</a>.
+            <img src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/121/completed-try-git-1d5111823aae2bb9d14fbcb663998353.png" height="42" width="42" style="float: left; margin: -2px 4px 0 0;"/> Aprenda Git de graça seu em navegador com <a href="http://try.github.com">Try Git</a>.
 
           <img class="illustration" src="images/branching-illustration@2x.png" width="389" height="251" />
 
@@ -45,20 +45,20 @@
           %aside.sidebar
             %nav
               %ul
-                %li= link_to "About", "/about", {:class => (@section == 'about') ? 'active' : ''}
+                %li= link_to "Sobre", "/about", {:class => (@section == 'about') ? 'active' : ''}
                 %li
-                  =link_to "Documentation", "/doc", {:class => (@section == 'documentation') ? 'active' : ''}
+                  =link_to "Documentação", "/doc", {:class => (@section == 'documentation') ? 'active' : ''}
                   %ul{:class => (@section == 'documentation') ? 'expanded' : ''}
-                    %li= link_to "Reference", "/docs", {:class => (@subsection == 'reference') ? 'active' : ''}
-                    %li= link_to "Book", "/book", {:class => (@subsection == 'book') ? 'active' : ''}
-                    %li= link_to "Videos", "/videos", {:class => (@subsection == 'videos') ? 'active' : ''}
-                    %li= link_to "External Links", "/doc/ext", {:class => (@subsection == 'external-links') ? 'active' : ''}
+                    %li= link_to "Referência", "/docs", {:class => (@subsection == 'reference') ? 'active' : ''}
+                    %li= link_to "Livro", "/book/pt-br", {:class => (@subsection == 'book') ? 'active' : ''}
+                    %li= link_to "Vídeos", "/videos", {:class => (@subsection == 'videos') ? 'active' : ''}
+                    %li= link_to "Links Externos", "/doc/ext", {:class => (@subsection == 'external-links') ? 'active' : ''}
                 %li
                   = link_to "Downloads", "/downloads", {:class => (@section == 'downloads') ? 'active' : ''}
                   %ul{:class => (@section == 'downloads') ? 'expanded' : ''}
-                    %li= link_to "GUI Clients", "/downloads/guis", {:class => (@subsection == 'guis') ? 'active' : ''}
+                    %li= link_to "Clientes Gráficos", "/downloads/guis", {:class => (@subsection == 'guis') ? 'active' : ''}
                     %li= link_to "Logos", "/downloads/logos", {:class => (@subsection == 'logos') ? 'active' : ''}
-                %li= link_to "Community", "/community", {:class => (@section == 'community') ? 'active' : ''}
+                %li= link_to "Comunidade", "/community", {:class => (@section == 'community') ? 'active' : ''}
 
             - if content_for(:sidebar)
               %hr.sidebar

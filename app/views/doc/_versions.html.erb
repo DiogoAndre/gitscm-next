@@ -1,7 +1,7 @@
-<a class="dropdown-trigger" id="reference-versions-trigger" data-panel-id="previous-versions-dropdown" href="#">Version <%= @version.name %> ▾</a>
-<span class="light"><%= @file.name %> last updated in <%= @last.version.name %></span>
+<a class="dropdown-trigger" id="reference-versions-trigger" data-panel-id="previous-versions-dropdown" href="#">Versão <%= @version.name %> ▾</a>
+<span class="light"><%= @file.name %> Atualizado em <%= @last.version.name %></span>
 <div class='dropdown-panel left' id='previous-versions-dropdown'>
-  <header>Changes in the <strong><%= @file.name %></strong> manual</header>
+  <header>Mudanças no manual de <strong><%= @file.name %></strong></header>
   <ol class='reference-previous-versions'>
     <% @versions.each do |v| %>
       <% if v[:changed] %>
@@ -29,7 +29,7 @@
     <!-- <li><a class="more" href="#">See more previous releases →</a></li> -->
   </ol>
   <footer>
-    <span class="light">Check your version of git by running<br></span>
+    <span class="light">Verifique a sua versão do Git com o comando<br></span>
     <strong>$</strong>
     <input type="text" class="copyable" value="git --version" />
   </footer>

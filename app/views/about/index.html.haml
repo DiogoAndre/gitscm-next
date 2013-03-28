@@ -1,76 +1,76 @@
 - @section = "about"
-- @page_title = "Git - About"
+- @page_title = "Git - Sobre"
 
 - content_for :sidebar do
   = render 'shared/book'
 
 %div#main
-  %h1 About
+  %h1 Sobre
 
   %ol#about-nav
     %li
-      <a href="#branching-and-merging" class="current three-line" id="nav-branching-and-merging" data-section-id="branching-and-merging">Branching and Merging</a>
+      <a href="#branching-and-merging" class="current two-line" id="nav-branching-and-merging" data-section-id="branching-and-merging">Ramificando e fundindo</a>
     %li
-      <a href="#small-and-fast" class="two-line" id="nav-small-and-fast" data-section-id="small-and-fast">Small and Fast</a>
+      <a href="#small-and-fast" class="two-line" id="nav-small-and-fast" data-section-id="small-and-fast">Pequeno e Rápido</a>
     %li
-      <a href="#distributed" class="one-line" id="nav-distributed" data-section-id="distributed">Distributed</a>
+      <a href="#distributed" class="one-line" id="nav-distributed" data-section-id="distributed">Distribuído</a>
     %li
-      <a href="#info-assurance" class="two-line" id="nav-info-assurance" data-section-id="info-assurance">Data Assurance</a>
+      <a href="#info-assurance" class="two-line" id="nav-info-assurance" data-section-id="info-assurance">Garantia de Dados</a>
     %li
-      <a href="#staging-area" class="two-line" id="nav-staging-area" data-section-id="staging-area">Staging Area</a>
+      <a href="#staging-area" class="two-line" id="nav-staging-area" data-section-id="staging-area">Área de Staging</a>
     %li
-      <a href="#free-and-open-source" class="three-line" id="nav-free-and-open-source" data-section-id="free-and-open-source">Free and Open Source</a>
+      <a href="#free-and-open-source" class="three-line" id="nav-free-and-open-source" data-section-id="free-and-open-source">Livre e de Código Aberto</a>
 
   %section.about#branching-and-merging.current
-    %h2 Branching and Merging
+    %h2 Ramificando e Fundindo
 
     %p
-      The Git feature that really makes it stand apart from nearly every other SCM out there is its branching model.
+      A funcionalidade que faz o Git se diferenciar de praticamente todos os outros SCM por aí é o seu modelo de ramificações(branching).
 
     %p
-      Git allows and encourages you to have multiple local branches that can be entirely independent of each other. The creation, merging, and deletion of those lines of development takes seconds.
+      Git permite e te encoraja a ter múltiplas ramificações locais que podem ser inteiramente independente umas das outras. A criação, fusão e remoção das linhas de desenvolvimento leva apenas alguns segundos.
 
     %p
-      This means that you can do things like:
+      Isso quer dizer que você pode fazer coisas como:
 
     %ul.bullets
       %li
-        <strong>Frictionless Context Switching</strong>. Create a branch to try out an idea, commit a few times, switch back to where you branched from, apply a patch, switch back to where you are experimenting, and merge it in.
+        <strong>Mudança de contexto sem atrito</strong>. Crie um ramo para testar sua ideia, faça uns commits, mude de volta para a origem do ramo, aplique um patch, volte para o ramo, e faça merge.
       %li
-        <strong>Role-Based Codelines</strong>. Have a branch that always contains only what goes to production, another that you merge work into for testing, and several smaller ones for day to day work.
+        <strong>Linhas de código para uma função específica</strong>. Tenha um ramo que sempre contém apenas o que vai para produção, outro em que você faz merges para testes, e vários outros pequenos para o trabalho do dia-a-dia.
       %li
-        <strong>Feature Based Workflow</strong>. Create new branches for each new feature you're working on so you can seamlessly switch back and forth between them, then delete each branch when that feature gets merged into your main line.
+        <strong>Fluxo de Trabalho baseado em Funcionalidades</strong>. Crie novos ramos para cada nova funcionalidade em que estiver trabalhando, para que possa alterar instantaneamente entre o código principal e o novo. Depois, apague cada ramo quando a funcionalidade for fundida a linha principal.
       %li
-        <strong>Disposable Experimentation</strong>. Create a branch to experiment in, realize it's not going to work, and just delete it - abandoning the work—with nobody else ever seeing it (even if you've pushed other branches in the meantime).
+        <strong>Experimentação Descartável</strong>. Crie uma ramifação para fazer um experimento, e então perceba que não vai funcionar e apenas a apague, abandone o trabalho, sem que ninguém jamais veja o que fez (mesmo que tenha enviado para outras ramificações enquanto isso).
 
     %p.center
       <img src="/images/about/branches@2x.png" width="500" height="288" alt="Branches" />
 
     %p
-      Notably, when you push to a remote repository, you do not have to push all of your branches. You can choose to share just one of your branches, a few of them, or all of them. This tends to free people to try new ideas without worrying about having to plan how and when they are going to merge it in or share it with others.
+      Notavelmente, quando você envia para um repositório, não precisa enviar todas as suas ramificações locais. Você pode escolher compartilhar apenas uma, algumas delas, ou todas. Isso deixa as pessoas livres para testar novas ideias sem a preocupação de como e quando será feita o merge ou ter que compartilhar com outros.
 
     %p
-      There are ways to accomplish some of this with other systems, but the work involved is much more difficult and error-prone. Git makes this process incredibly easy and it changes the way most developers work when they learn it.
+      Existem formas de alcançar isso com outros sistemas, mas o trabalho envolvido é muito mais difícil e propenso a erros. Git deixa o processo incrivelmente fácil e isso muda a foram com que a maioria dos desenvolvedores trabalha depois que eles aprendem.
 
     %div.bottom-nav
-      =link_to "Small and Fast →", "#small-and-fast", {:class => 'next', 'data-section-id' => 'small-and-fast'}
+      =link_to "Pequeno e Rápido →", "#small-and-fast", {:class => 'next', 'data-section-id' => 'small-and-fast'}
 
 
   %section.about#small-and-fast
-    %h2 Small and Fast
+    %h2 Pequeno e Rápido
 
     %p
-      <strong>Git is fast</strong>. With Git, nearly all operations are performed locally, giving it a huge speed advantage on centralized systems that constantly have to communicate with a server somewhere.
+      <strong>Git é rápido</strong>. Com Git, quase todas as operações são locais, dando uma grande vantagem em velocidade sobre sistemas centralizados que constantemente precisam se comunicar com um servidor em algum lugar.
 
     %p
-      Git was built to work on the Linux kernel, meaning that it has had to effectively handle large repositories from day one. Git is written in C, reducing the overhead of runtimes associated with higher-level languages. Speed and performance has been a primary design goal of the Git from the start.
+      Git foi construído para trabalhar no Kernel Linux, isso quer dizer que desde o início ele já precisava suportar grandes repositórios. Git é escrito em C, reduzingo o overhead associado a linguagens de mais alto nível. Velocidade e performance foram objetivos primários do design do Git desde o princípio.
 
     %h3 Benchmarks
 
     %p
-      Let's see how common operations stack up against
-      Subversion, a common centralized version control system that is similar
-      to CVS or Perforce. <em>Smaller is faster.</em>
+      Vamos ver como operações comuns se comparam com
+      Subversion, um sistema de controle de versão centralizado que é similar
+      ao CVS ou Perforce. <em>Pequeno é mais rápido</em>
 
     %table{:width => '100%'}
       %tr
@@ -100,189 +100,170 @@
         %td
           =raw gchart("Size", [['git', 181], ['svn', 132]])
     %p
-      For testing, large AWS instances were set up in the same availability zone.
-      Git and SVN were installed on both machines, the Ruby repository was copied to
-      both Git and SVN servers, and common operations were performed on both.
+      Para os testes, instâncias grandes AWS foram configuradas na mesma zona de disponibilidade. Git e SVN foram instalados em ambas as máquinas, o repositório Ruby foi copiado para 
+      os servidores Git e SVN, e operações comuns foram realizadas em ambas.
+
     %p
-      In some cases the commands don't match up exactly. Here, matching on the lowest
-      common denominator was attempted. For example, the 'commit' tests also include
-      the time to push for Git, though most of the time you would not actually be pushing
-      to the server immediately after a commit where the two commands cannot be separated
-      in SVN.
+      Os comandos não se equivalem exatamente em alguns casos. Aqui, a equivalência pelo menor denominador comum foi buscada. Por exemplo, o teste 'commit' também inclui o tempo de enviar para o Git, apesar de que na maioria do tempo você não estaria enviando para o servidor imediatamente após um commit. No SVN os dois comandos não podem ser separados. 
+
     %p
-      All of these times are in seconds.
+      Todos os tempos estão em segundos.
 
     %table.benchmarks
       %tr
-        %th Operation
+        %th Operação
         %th
         %th.right Git
         %th.right SVN
-      =raw rchart("Commit Files (A)", [['git', 0.64], ['svn', 2.60]], "Add, commit and push 113 modified files (2164+, 2259-)")
-      =raw rchart("Commit Images (B)", [['git', 1.53], ['svn', 24.70]], "Add, commit and push 1000 1k images")
-      =raw rchart("Diff Current", [['git', 0.25], ['svn', 1.09]], "Diff 187 changed files (1664+, 4859-) against last commit")
-      =raw rchart("Diff Recent", [['git', 0.248], ['svn', 3.99]], "Diff against 4 commits back (269 changed/3609+,6898-)")
-      =raw rchart("Diff Tags", [['git', 1.17], ['svn', 83.57]], "Diff two tags against each other (v1.9.1.0/v1.9.3.0 )")
-      =raw rchart("Log (50)", [['git', 0.012], ['svn', 0.381]], "Log of the last 50 commits (19k of output)")
-      =raw rchart("Log (All)", [['git', 0.52], ['svn', 169.20]], "Log of all commits (26,056 commits - 9.4M of output)")
-      =raw rchart("Log (File)", [['git', 0.60], ['svn', 82.84]], "Log of the history of a single file (array.c - 483 revs)")
+      =raw rchart("Commit Files (A)", [['git', 0.64], ['svn', 2.60]], "Add, commit and push 113 arquivos modificados (2164+, 2259-)")
+      =raw rchart("Commit Images (B)", [['git', 1.53], ['svn', 24.70]], "Add, commit and push 1000 images de 1k")
+      =raw rchart("Diff Current", [['git', 0.25], ['svn', 1.09]], "Diff 187 arquivos alterados (1664+, 4859-) contra o último commit")
+      =raw rchart("Diff Recent", [['git', 0.248], ['svn', 3.99]], "Diff contra 4 commits anteriores (269 changed/3609+,6898-)")
+      =raw rchart("Diff Tags", [['git', 1.17], ['svn', 83.57]], "Diff duas tags uma contra a outra (v1.9.1.0/v1.9.3.0 )")
+      =raw rchart("Log (50)", [['git', 0.012], ['svn', 0.381]], "Log dos 50 últimos commits (19k of output)")
+      =raw rchart("Log (All)", [['git', 0.52], ['svn', 169.20]], "Log de todos os commits (26,056 commits - 9.4M of output)")
+      =raw rchart("Log (File)", [['git', 0.60], ['svn', 82.84]], "Log do histórico de um único arquivo (array.c - 483 revs)")
       =raw rchart("Update", [['git', 0.90], ['svn', 2.82]], "Pull of Commit A scenario (113 files changed, 2164+, 2259-)")
-      =raw rchart("Blame", [['git', 1.91], ['svn', 3.04]], "Line annotation of a single file (array.c)")
+      =raw rchart("Blame", [['git', 1.91], ['svn', 3.04]], "Anotação de cada linha de um arquivo (array.c)")
 
     %p
-      Note that this is the best case scenario for SVN - a server with no load with an
-      80MB/s bandwidth connection to the client machine.  Nearly all of these
-      times would be even worse for SVN if that connection was slower, while
-      many of the Git times would not be affected.
+      Note que este é o melhor caso para SVN - um servidor sem carga e com uma banda de 80MB/s com a máquina cliente. Quase todos esses tempos teriam sido piores para o SVN se a conexão fosse mais lenta, enquanto muitos dos tempos do Git não seriam afetados.
     %p
-      Clearly, in many of these common version control operations, <strong>Git is
-      one or two orders of magnitude faster than SVN</strong>, even under ideal conditions
-      for SVN.
+      Fica claro que em muitas dessas operações comuns de controle de versão o <strong>Git é uma ou duas ordens de magnitude mais rápido que o SVN</strong>, mesmo sob condições ideais para o SVN.
     %p
-      One place where Git is slower is in the initial clone operation.
-      Here, Git is downloading the entire history rather than only the latest
-      version. As seen in the above charts, it's not considerably slower for an operation
-      that is only performed once.
+      Um lugar onde o Git é mais lento é a operação de clonagem inicial. Aqui o Git está fazendo o download de todo o histórico, ao invés de apenas as operações mais recentes. Como visto nos gráficos acima, ele não é consideravelmente lento para uma operação que é executada somente uma vez.
 
     %table.benchmarks
       %tr
-        %th Operation
+        %th Operação
         %th
         %th.right Git*
         %th.right Git
         %th.right SVN
-      =raw trchart("Clone", [['git*', 21.0], ['git', 107.50], ['svn', 14.00]], "Clone and shallow clone(*) in Git vs checkout in SVN")
-      =raw trchart("Size (M)", [[nil, nil], ['git', 181], ['svn', 132]], "Size of total client side data and files after clone/checkout (in M)")
+      =raw trchart("Clone", [['git*', 21.0], ['git', 107.50], ['svn', 14.00]], "Clone e clone raso(*) em Git vs checkout no SVN")
+      =raw trchart("Size (M)", [[nil, nil], ['git', 181], ['svn', 132]], "Tamanho total dos dados no cliente e arquivos depois do clone/checkout (em M)")
 
     %p
-      It's also interesting to note that the size of the data on the client side
-      is very similar even though Git also has every version of every file for the
-      entire history of the project. This illustrates how efficient it is at compressing
-      and storing data on the client side.
+      Também é interessante notar que o tamanho dos dados no cliente é muito similar, apesar do Git ter todas as versões de todos todos os arquivos para o histórico completo do projeto. Isso ilustra o quão eficiente ele é em comprimir e armazenar dados no cliente.
 
     %div.bottom-nav
-      =link_to "← Branching and Merging", "#branching-and-merging", {:class => 'previous', 'data-section-id' => 'branching-and-merging'}
-      =link_to "Distributed →", "#distributed", {:class => 'next', 'data-section-id' => 'distributed'}
+      =link_to "← Ramificando e Fundindo", "#branching-and-merging", {:class => 'previous', 'data-section-id' => 'branching-and-merging'}
+      =link_to "Distribuído →", "#distributed", {:class => 'next', 'data-section-id' => 'distributed'}
 
   %section.about#distributed
-    %h2 Distributed
+    %h2 Distribuído
 
     %p
-      One of the nicest features of any Distributed SCM, Git included, is that it's distributed. This means that instead of doing a "checkout" of the current tip of the source code, you do a "clone" of the entire repository.
+      Uma das coisas mais legais sobre SCM distribuídos, incluindo o Git, é que eles são distribuídos. Isso quer dizer que ao invés de fazer um checkout da atual ponta do código fonte, você faz um clone do repositório inteiro.
 
-    %h3 Multiple Backups
-
-    %p
-      This means that even if you're using a centralized workflow, every user essentially has a full backup of the main server. Each of these copies could be pushed up to replace the main server in the event of a crash or corruption. In effect, there is no single point of failure with Git unless there is only a single copy of the repository.
-
-    %h3 Any Workflow
+    %h3 Múltiplos Backups
 
     %p
-      Because of Git's distributed nature and superb branching system, an almost endless number of workflows can be implemented with relative ease.
+      Mesmo que esteja utilizando um fluxo de trabalho centralizado, cada usuário tem em essência um backup completo do servidor principal. Cada uma dessas cópias poderia ser enviada para repor o servidor principal em caso de falha ou corrupção. De fato, não existe um ponto único de falha com Git, ao não ser que exista apenas uma copia do repositório.
 
-    %h4 Subversion-Style Workflow
+    %h3 Qualquer Fluxo de Trabalho
 
     %p
-      A centralized workflow is very common, especially from people transitioning from a centralized system. Git will not allow you to push if someone has pushed since the last time you fetched, so a centralized model where all developers push to the same server works just fine.
+      Por causa da natureza distribuída do Git e do ótimo sistema de ramificações, um quase sem fim número de fluxos de trabalho pode ser implementado com relativa facilidade.
+
+    %h4 Fluxo estilo Subversion
+
+    %p
+      Um fluxo de trabalho centralizado é muito comum, especialmente a partir de pessoas fazendo a transição de sistemas centralizados. Git não vai permitir que envie se alguém envio desde a última vez que buscou atualizações, então um modelo centralizado onde todos os desenvolvedores enviam para o mesmo servidor funciona bem.
 
     %p.center
       <img src="/images/about/workflow-a@2x.png" width="415" height="209" alt="Workflow A" />
 
-    %h4 Integration Manager Workflow
+    %h4 Fluxo do Gerente de Integração
 
     %p
-      Another common Git workflow involves an integration manager — a single person who commits to the 'blessed' repository. A number of developers then clone from that repository, push to their own independent repositories, and ask the integrator to pull in their changes. This is the type of development model often seen with open source or GitHub repositories.
+      Outro fluxo comum involve um gerente de integração - uma única pessoa que faz commits para o repositório 'abençoado'. Os desenvolvedores clonam esse repositório, enviam suas mudanças para suas ramificações independentes e pedem ao integrador para puxar suas mudanças para o repositório abençoado. Este é tipo de modelo de desenvolvimento normalmente visto em repositórios de código aberto ou no GitHub.
 
     %p.center
       <img src="/images/about/workflow-b@2x.png" width="407" height="164" alt="Workflow B" />
 
-    %h4 Dictator and Lieutenants Workflow
+    %h4 Fluxo com Ditador e Tenentes
 
     %p
-      For more massive projects, a development workflow like that of the Linux kernel is often effective.
-      In this model, some people ('lieutenants') are in charge of a specific subsystem of the project and they merge in all changes related to that subsystem. Another integrator (the 'dictator') can pull changes from only his/her lieutenants and then push to the 'blessed' repository that everyone then clones from again.
+      Para projetos mais pesados, um fluxo de desenvolvimento como do do Kernel do Linux é frequentemente efetivo.
+      Neste modelo, algumas pessoas ('tententes') são responsáveis por subsistemas específicos do projeto e eles fazem a fusão de todas as mudanças relacionadas aquele subsistema. Outro integrador (o 'ditador') pode buscar as mudanças de seus tenentes e então enviar para um repositório 'abençoado', que todos vão clonar novamente.
 
     %p.center
       <img src="/images/about/workflow-c@2x.png" width="562" height="303" alt="Workflow C" />
 
     %div.bottom-nav
-      =link_to "← Small and Fast", "#small-and-fast", {:class => 'previous', 'data-section-id' => 'small-and-fast'}
-      =link_to "Data Assurance →", "#info-assurance", {:class => 'next', 'data-section-id' => 'info-assurance'}
+      =link_to "← Pequeno e Rápido", "#small-and-fast", {:class => 'previous', 'data-section-id' => 'small-and-fast'}
+      =link_to "Garantia de Dados →", "#info-assurance", {:class => 'next', 'data-section-id' => 'info-assurance'}
 
   %section.about#info-assurance
-    %h2 Data Assurance
+    %h2 Garantia de Dados
 
     %p
-      The data model that Git uses ensures the cryptographic integrity of every bit
-      of your project.  Every file and commit is checksummed and retrieved by its
-      checksum when checked back out. It's impossible to get anything out of Git
-      other than the <strong>exact bits you put in</strong>.
+      O modelo de dados que o Git usa garante a integridade criptográfica de cada bit de seu projeto. Cada arquivo e commit gera um checksum, e é buscado por seu checksum quando requisitado novamente. É impossível retirar alguma coisa do Git além dos <strong>exatos bits que colocou lá</strong>.
 
     %img{:src => "/images/assurance@2x.png", :width => "628", :height => "522"}
 
     %p
-      It is also impossible to change any file, date, commit message, or any other
-      data in a Git repository without changing the IDs of everything after it.
-      This means that if you have a commit ID, you can be assured not only that
-      your project is exactly the same as when it was committed, but
-      that nothing in its history was changed.
+      Também é impossível aterar qualquer arquivo, data, mensagem de commit ou qualquer outro dado em um repositório Git sem mudar os IDs de tudo depois.
+      Isso quer dizer que se você tem um ID de commit pode ter certeza de que não somente o seu projeto é exatamente o mesmo de quando fez o commit, mas também que nada no histórico foi alterado.
 
     %p
-      Most centralized version control systems provide no such integrity by default.
+      A maioria dos sistemas de controle de versão centralizados não fornece essa integridade por padrão. 
 
     %div.bottom-nav
-      =link_to "← Distributed", "#distributed", {:class => 'previous', 'data-section-id' => 'distributed'}
-      =link_to "Staging Area →", "#staging-area", {:class => 'next', 'data-section-id' => 'staging-area'}
+      =link_to "← Distribuído", "#distributed", {:class => 'previous', 'data-section-id' => 'distributed'}
+      =link_to "Área de Staging →", "#staging-area", {:class => 'next', 'data-section-id' => 'staging-area'}
 
   %section.about#staging-area
-    %h2 Staging Area
+    %h2 Área de Staging
 
     %p
-      Unlike the other systems, Git has something called the "staging area" or "index". This is an intermediate area where commits can be formatted and reviewed before completing the commit.
+      Diferente de outros sitemas, Git tem uma coisa chamada de 'Área de Staging' ou 'índice'. Está é uma área intermediária onde os commits podem ser formatados e revisados antes de estarem completos.
 
     %p
-      One thing that sets Git apart from other tools is that it's possible to quickly stage some of your files and commit them without committing all of the other modified files in your working directory or having to list them on the command line during the commit.
+      Uma coisa que diferencia o Git de outras ferramentas é que é possível rapidamente selecionar alguns arquivos e fazer o commit deles sem ter que enviar todos os outros arquivos modificados, e nem ter que listá-los na linha de comando durante o commit.
 
     %p.center
       <img src="/images/about/index1@2x.png" width="336" height="194" alt="Index 1" />
 
     %p
-      This allows you to stage only portions of a modified file. Gone are the days of making two logically unrelated modifications to a file before you realized that you forgot to commit one of them. Now you can just stage the change you need for the current commit and stage the other change for the next commit. This feature scales up to as many different changes to your file as needed.
+      Isso permite selecionar apenas partes de um arquivo modificado. Já foi o tempo em que fazer duas mudanças logicamente não relacionadas a um arquivo para só depois lembrar que esqueceu de fazer commit de uma das mudanças. Agora você pode simplesmente selectionar a mudança que precisa para o commit atual, e deixar as outras mudanças para o próximo commit. Esta funcionalidade se escala para quantas mudanças diferentes para o mesmo arquivo quanto necessárias.
 
     %p
-      Of course, Git also makes it easy to ignore this feature if you don't want that kind of control — just add a '-a' to your commit command in order to add all changes to all files to the staging area.
+      E claro, Git também permite que facilmente se ignore essa funcionalidade se você não precisa deste tipo de controle: apenas adicione '-a' para o seu comando de commit para que todas as mudanças em todos os arquivos sejam incluídas.
 
     %p.center
       <img src="/images/about/index2@2x.png" width="338" height="185" alt="Index 2" />
 
     %div.bottom-nav
-      =link_to "← Data Assurance", "#info-assurance", {:class => 'previous', 'data-section-id' => 'info-assurance'}
-      =link_to "Free and Open Source →", "#free-and-open-source", {:class => 'next', 'data-section-id' => 'free-and-open-source'}
+      =link_to "← Garantia de Dados", "#info-assurance", {:class => 'previous', 'data-section-id' => 'info-assurance'}
+      =link_to "Livre e de Código Aberto →", "#free-and-open-source", {:class => 'next', 'data-section-id' => 'free-and-open-source'}
 
 
   %section.about#free-and-open-source
-    %h2 Free and Open Source
+    %h2 Livre e de Código Aberto
 
     %p
-      Git is released under the <a href="https://github.com/git/git/blob/master/COPYING">GPLv2</a> <a href="http://www.opensource.org/docs/osd">open source license</a>.  This means that you are free to <a href="https://github.com/git/git">inspect the source code</a> at any time or <a href="https://github.com/git/git/blob/master/Documentation/SubmittingPatches">contribute</a> to the project yourself.
+      Git é publicado sob a licença
+      Git is released under the <a href="https://github.com/git/git/blob/master/COPYING">GPLv2</a> <a href="http://www.opensource.org/docs/osd">licença de código aberto</a>. Isso significa que você está livre para <a href="https://github.com/git/git">inspecionar o código fonte</a> a qualquer momeento ou <a href="https://github.com/git/git/blob/master/Documentation/SubmittingPatches">contribuir</a> você mesmo para o projeto.
 
     %p
-      Under Git's GPLv2 software license, you <strong>may</strong>:
+      Sob a licença de software GPLv2 do Git, you <strong>pode</strong>:
 
       %ul.bullets
-        %li Use Git on open or proprietary projects for free, forever
-        %li Download, inspect and modify the source code to Git
-        %li Make proprietary changes to Git that you do not redistribute publicly
-        %li Call Git binaries from your open or proprietary programs
-        %li Publicly redistribute Git binaries with open or proprietary programs, given that they are unmodified or the modifications are public
+        %li Usar o Git em projetos abertos ou proprietários de graça, para sempre
+        %li Baixar, inspecionar e modificar o código fonte do Git
+        %li Fazer mudanças proprietárias para o Git que não sejam distribuídas publicamente
+        %li Chamar binários do Git a partir de seu programa aberto ou proprietário
+        %li Redistribuir publicamento os binários do Git com programas abertos ou proprietários, desde que eles não sejam modificados ou que as modificações sejam públicas
 
     %p
-      Under this license you <strong>may not</strong>:
+      Sob esta licença você <strong>não pode</strong>:
 
       %ul.bullets
-        %li Make proprietary changes to Git and publicly redistribute it without sharing the changes
-        %li Make and publicly distribute changes to Git under a different license
-        %li Use source code from the Git repository in a project under a different license without permission
+        %li Fazer mudanças proprietárias no Git e distribuir pubicamente sem compartilhar essas mudanças
+        %li Fazer mudanças e distribuir publicamente sob uma licença diferente
+        %li Usar código fonte do repositório Git em um projeto sob uma licença diferente sem prévia autorização
 
     %div.bottom-nav
-      =link_to "← Staging Area", "#staging-area", {:class => 'previous', 'data-section-id' => 'staging-area'}
+      =link_to "← Área de Staging", "#staging-area", {:class => 'previous', 'data-section-id' => 'staging-area'}

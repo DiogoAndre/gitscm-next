@@ -4,10 +4,11 @@
 - content_for :sidebar do
   %div.callout
     %p
-      The entire <strong><a href="#">Pro Git book</a></strong> written by Scott Chacon is available to <a href="#">read online for free</a>. Dead tree versions are available on <a href="#">Amazon.com</a>.
+      O livro <strong><a href="/book">Pro Git</a></strong> completo, escrito por Scott Chacon, está disponível <a href="/book/pt-br">de graça para leitura online</a>.
+      Versões em árvores mortas estão disponíveis na <a href="http://www.amazon.com/gp/product/1430218339?ie=UTF8&camp=1789&creative=9325&creativeASIN=1430218339&linkCode=as2&tag=git-sfconservancy-20">Amazon.com</a>. 
 
 %div#main
-  %h1 Git Installers
+  %h1 Instaladores do Git
 
   %div.two-column
     %div.column-left
@@ -17,23 +18,23 @@
             %td
               %strong Debian
             %td
-              =link_to "Stable", "http://packages.debian.org/stable/devel/git" 
+              =link_to "Estável", "http://packages.debian.org/stable/devel/git" 
               <span class="light">|</span>
-              =link_to "Testing", "http://packages.debian.org/testing/devel/git" 
+              =link_to "Em Teste", "http://packages.debian.org/testing/devel/git" 
               <span class="light">|</span>
-              =link_to "Unstable", "http://packages.debian.org/unstable/devel/git"
+              =link_to "Instável", "http://packages.debian.org/unstable/devel/git"
           %tr
             %td 
               %strong Windows
             %td 
-              =link_to "Stable", "http://code.google.com/p/msysgit/downloads/list"
+              =link_to "Estável", "http://code.google.com/p/msysgit/downloads/list"
               <span class="light">|</span>
               =link_to "Cygwin", "http://www.cygwin.com/setup.exe"
           %tr
             %td
               %strong Mac
             %td 
-              =link_to "Stable", "http://code.google.com/p/git-osx-installer/downloads/list?can=3"
+              =link_to "Estável", "http://code.google.com/p/git-osx-installer/downloads/list?can=3"
           %tr
             %td 
               %strong Solaris
@@ -43,10 +44,10 @@
               =link_to "v9-10", "http://opencsw.org/packages/git/"
 
       %p
-        <a href="http://code.google.com/p/git-core/downloads/list">Older releases</a> are available and the <a href="https://github.com/gitster/git">Git source repository</a> is on GitHub.
+        <a href="http://code.google.com/p/git-core/downloads/list">Versões antigas</a> estão disponíveis e o <a href="https://github.com/gitster/git">repositório fonte do Git</a> está no GitHub.
 
       %p
-        Daily snapshots of the main Git development branch are available at <a href="http://codemonkey.org">codemonkey.org</a>.
+        Snapshots diários do principal branch de desenvolvimento do Git estão disponíveis em <a href="http://codemonkey.org">codemonkey.org</a>.
 
     %div.column-right
       = partial 'shared/monitor'
@@ -55,16 +56,16 @@
   %h2 Git via Git
 
   %p
-    If you already have Git installed, you can get the latest development version via Git itself:
+    Se você já tem o Git instalado pode obter a versão de desenvolvimento mais recente através do próprio Git:
 
   %code
     git clone git://github.com/gitster/git.git
 
   %p
-    If you have problems connecting (Git uses port 9418), you can try to access the repository over the HTTP protocol:
+    Se você tiver problemas conetando (Git usa a porta 9418), pode tentar acessar o repositório através do protocolo HTTP:
 
   %code
     git clone https://github.com/gitster/git.git
 
   %p
-    You can also always browse the current contents of the git repository using either the <a href="#">gitweb or <a href="#">GitHub</a> web interface.
+    Você também pode navegar pelo conteúdo do repositório do Git usando a <a href="https://github.com/git/git">interface web</a>..

@@ -1,73 +1,64 @@
 # Git Homepage [![Build Status](https://secure.travis-ci.org/github/gitscm-next.png?branch=master)](http://travis-ci.org/github/gitscm-next)
 
-This is the web application for the [git-scm.com](http://git-scm.com) site.  It is meant to be the
-first place that a person new to Git will land and download or learn about the
-Git SCM system.
+Esta é a aplicação web para o site [git-scm.com.br](http://git-scm.com.br). O objetivo é que este seja o primeiro lugar que uma pessoa nova ao Git chegue para baixar e aprender sobre o sistema Git SCM.
 
-This app is written in Ruby on Rails and deployed on Heroku.
+Este aplicativo é escrito em Ruby on Rails e implantado no Heruko.
 
-## Setup
+## Instalação
 
-You'll need a Ruby environment to run Rails.  First do:
+Você vai precisar de um ambiente Ruby para rodar o Rails. Para começar faça:
 
     $ rvm use 1.9.2
     $ bundle install
 
-Then you need to create the database structure:
+Depois você precisa criar a estrutura do banco de dados:
 
     $ rake db:migrate
 
-Now you'll want to populate the man pages.  You can do so from a local Git
-source clone like this:
+Agora você deve popular as páginas do manual (man). Você pode fazer isso a partir de um clone local do código fonte Git:
 
     $ GIT_REPO=../git/.git rake local_index
 
-Or you can do it from GitHub (much slower) like this:
+Ou pode fazer a partir do GitHub(muito mais lento) assim:
 
     $ rake preindex
 
-Now you need to get the latest downloads for the downloads pages:
+Você precisa baixar os downloads mais atuais para a página de downloads:
 
     $ rake downloads
 
-Now you'll probably want some book data. You'll have
-to have access to the progit project on the Github through the API.
+Agora você vai provavelmente querer o dados do livro. É preciso de acesso ao projeto progit através da API do GitHub.
 
     $ export API_USER=github_username
     $ export API_PASS=github_password
     $ rake remote_genbook
 
-That will generate the book content from the markdown files fetched from the online repository  and post it to the Rails server database.
+Isso vai gerar o conteúdo do livro a partir dos arquivos markdown buscados no repositório online e vai colocá-los no banco de dados do servidor Rails. 
 
-Now you can run the Rails site to take a look.  Specify an UPDATE_TOKEN so you
-can use the world's stupidest authentication mechanism:
+Agora você pode rodar o servidor Rails para dar uma olhada no resultado. Especifique um UPDATE_TOKEN para que possa usar o mecanismo de autenticação mais ridículo do mundo:
 
     $ UPDATE_TOKEN=something rails server
 
-The site should be running on http://localhost:3000
+O site deve estar rodando em http://localhost:3000
 
 
-## Testing
+## Testando
 
-To run the tests for this project, run:
+Para roda os testes para este projeto, faça:
 
     $ rake test
 
-To run the website for testing purposes, run:
+Para rodar o website para fins de teste, faça:
 
     $ bundle exec rackup config.ru
 
-## Contributing
+## Contribuindo
 
-If you wish to contribute to this website, please [fork it on GitHub](https://github.com/github/gitscm-next), push your
-change to a named branch, then send me a pull request. If it is a big feature,
-you might want to contact me first to make sure it's something that I'll
-accept.  If it involves code, please also write tests for it.
+Se desejar contribuir com este website, por favor [fork no GitHub](https://github.com/github/gitscm-next), envie suas mudanças para um branch nomeado, e me envie um pull request. Se for uma grande mudança, talvez seja melhor entrar em contato primeiro, para ter certeza que é algo que será aceito. Se envolver código, por favor inclua testes para ele.
 
-## License
+## Licença
 
-This source code for the site is licensed under the MIT, which you can find in
-the MIT-LICENSE.txt file.
+Este código fonte está licenciado sob a licença MIT, que pode ser encontrada no arquivo MIT-LICENSE.txt.
 
-All graphical assets are licensed under the
+Todo o conteúdo gráfico está licenciado sob a
 [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).

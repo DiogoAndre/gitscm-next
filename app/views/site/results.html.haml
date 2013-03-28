@@ -1,12 +1,12 @@
-- @section = "search"
+- @section = "Busca"
 - @subsection = ""
-- @page_title = "Search results for #{h(@term)}"
+- @page_title = "Resultados da busca por #{h(@term)}"
 
 - content_for :sidebar do
   = render 'shared/related'
 
 %div#main
-  %h1=raw "Search results for <strong>#{h(@term)}</strong>"
+  %h1=raw "Resultados da busca por <strong>#{h(@term)}</strong>"
 
   - if @top.size > 0
     %div.callout.top-matches
@@ -33,5 +33,4 @@
           %p=raw highlight_no_html(hit[:highlight])
 
   - if @rest.size + @top.size == 0
-    %h2 Sorry, no search matches
-
+    %h2 Desculpe, nada foi encontrado

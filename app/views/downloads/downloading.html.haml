@@ -6,41 +6,41 @@
   = render 'shared/book'
 
 %div#main
-  %h1 Downloading Git
+  %h1 Baixando o Git
 
   %div.callout.downloading
-    %h3 Your download is starting...
+    %h3 Seu download está começando...
 
-    %p=raw "You are downloading version <strong>#{@download.version.name}</strong> of Git for the <strong>#{@platform.capitalize}</strong> platform. This is the most recent <a href='#{@project_url}'>maintained build</a> for this platform. It was released <strong>#{time_ago_in_words @download.release_date} ago</strong>, on #{@download.release_date.strftime("%Y-%m-%d")}."
+    %p=raw "Você está baixando a versão <strong>#{@download.version.name}</strong> do Git para a plataforma<strong>#{@platform.capitalize}</strong>. Esta é a versão mais recente para essa plataforma <a href='#{@project_url}'>maintained build</a>. Ela foi disponibilizada <strong>#{time_ago_in_words @download.release_date} atrás</strong>, em #{@download.release_date.strftime("%Y-%m-%d")}."
 
-    %p=raw "<strong>If your download hasn't started, <a href=\"#{@download.url}\">click here to download manually</a>.</strong>"
+    %p=raw "<strong>Se o seu download ainda não começou, <a href=\"#{@download.url}\">clique aqui para baixar manualmente</a>.</strong>"
 
-    %p.small=raw "The current source code release is version <strong>#{@latest.name}</strong>. If you want the newer version, you can build it from <a href=\"#{@source_url}\">the source code</a>."
+    %p.small=raw "A versão fonte atual é a <strong>#{@latest.name}</strong>.Se você quiser a versão mais nova, pode compliar <a href=\"#{@source_url}\">do código fonte</a>."
 
   %iframe{:width => 1, :height => 1, :frameborder => 0, :src => @download.url}
 
-  %h2 Now What?
+  %h2 E Agora?
 
   %p
+    Agora que você já baixou o Git, é hora de começar a usá-lo.
     Now that you have downloaded Git, it's time to start using it.
 
   %ul#download-next-steps
     %li
-      <a href="/book">
+      <a href="/book/pt-br">
       <img src="/images/icons/nav-read-book.png" />
-      <h3>Read the Book</h3>
-      <p>Dive into the Pro Git book and learn at your own pace.</p>
+      <h3>Leia o Livro</h3>
+      <p>Mergulhe no livro Pro Git e aprenda no seu próprio ritmo.</p>
       </a>
     %li
       <a href="/downloads/guis">
       <img src="/images/icons/nav-download-gui.png" />
-      <h3>Download a GUI</h3>
-      <p>Several free and commercial GUI tools are available for the #{@platform.capitalize} platform.</p>
+      <h3>Baixe uma GUI</h3>
+      <p>Diversas versãos grátis e comerciais estão disponíveis na plataforma #{@platform.capitalize}</p>
       </a>
     %li
       <a href="/community">
       <img src="/images/icons/nav-get-involved.png" />
-      <h3>Get Involved</h3>
-      <p>A knowledgeable Git community is available to answer your questions.</p>
+      <h3>Envolva-se</h3>
+      <p>Uma sábia comunidade Git está disponível para responder suas perguntas.</p>
       </a>
-
