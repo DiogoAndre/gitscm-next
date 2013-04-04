@@ -1,0 +1,11 @@
+- @section    = 'blog'
+
+%div#main
+  %h1 Blog
+
+  -list_entries.each do |entry|
+    %p
+      %strong
+        = link_to entry[:title], format_path(entry)
+      %small.light
+        = entry[:date_published].strftime('%Y-%m-%d')
