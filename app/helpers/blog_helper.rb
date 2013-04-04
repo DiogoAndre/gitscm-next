@@ -10,7 +10,7 @@ module BlogHelper
                   :slug => file[2].parameterize
                 }
     end
-    entries = entries.sort_by { |k| k["date_published"] }.reverse
+    entries = entries.sort_by { |k| k[:date_published] }.reverse
   end
 
   def format_path(entry)
