@@ -5,7 +5,7 @@
     Dir[path].each do |uri|
       file = uri.match(/^.*\/(.{10})(.*).(markdown|html)/)
       posts << {:uri => file[0],
-                  :file => file[1]  file[2],
+                  :file => file[1] + file[2],
                   :date_published => Date.parse(file[1]),
                   :title=> file[2].titleize,
                   :slug => file[2].parameterize
